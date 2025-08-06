@@ -19,9 +19,9 @@ export const EQUIPMENT_DATA = [
       width: '2.8 m'
     }),
     images: [
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
+      'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
+      'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
     ],
     condition: 'used',
     availability: 'available',
@@ -44,7 +44,7 @@ export const EQUIPMENT_DATA = [
       hydraulics: '110 L/min'
     }),
     images: [
-      'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
+      'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
       'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
     ],
     condition: 'new',
@@ -68,7 +68,7 @@ export const EQUIPMENT_DATA = [
       mast: 'Triplex'
     }),
     images: [
-      'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
     ],
     condition: 'used',
     availability: 'available',
@@ -91,7 +91,7 @@ export const EQUIPMENT_DATA = [
       ground_pressure: '0.7 kg/cm²'
     }),
     images: [
-      'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
     ],
     condition: 'new',
     availability: 'available',
@@ -114,7 +114,7 @@ export const EQUIPMENT_DATA = [
       unloading_rate: '120 L/s'
     }),
     images: [
-      'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
     ],
     condition: 'used',
     availability: 'available',
@@ -137,7 +137,7 @@ export const EQUIPMENT_DATA = [
       outriggers: '7.2m empattement'
     }),
     images: [
-      'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
     ],
     condition: 'new',
     availability: 'available',
@@ -158,7 +158,7 @@ export const PARTS_DATA = [
     compatibility: ['CAT 320', 'JCB 8080', 'Komatsu PC200'],
     description: 'Filtre à huile haute performance pour moteurs diesel industriels',
     images: [
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300'
+      'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300'
     ],
     availability: 'in_stock',
     featured: true
@@ -171,7 +171,7 @@ export const PARTS_DATA = [
     compatibility: ['Liebherr', 'Volvo', 'Hitachi'],
     description: 'Pompe hydraulique principale pour excavatrice',
     images: [
-      'https://images.unsplash.com/photo-1562408590-e32931084e23?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300'
+      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300'
     ],
     availability: 'on_order',
     featured: true
@@ -184,7 +184,7 @@ export const PARTS_DATA = [
     compatibility: ['Komatsu PC200', 'CAT 320'],
     description: 'Chaîne de chenille renforcée pour excavatrice',
     images: [
-      'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300'
+      'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300'
     ],
     availability: 'in_stock',
     featured: true
@@ -197,7 +197,7 @@ export const PARTS_DATA = [
     compatibility: ['Universel'],
     description: 'Siège opérateur ergonomique avec suspension pneumatique',
     images: [
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300'
+      'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300'
     ],
     availability: 'in_stock',
     featured: true
