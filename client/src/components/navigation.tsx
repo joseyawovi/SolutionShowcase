@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { LanguageSwitcher } from "./language-switcher";
+import logoSolution88 from "@assets/LOGO-SOLUTION-88 (1)_1754472070384.png";
 
 export function Navigation() {
   const [location] = useLocation();
@@ -42,12 +43,11 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">
             <div className="flex-shrink-0">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S88</span>
-              </div>
-            </div>
-            <div className="ml-3">
-              <h1 className="text-xl font-bold text-primary">Solution 88</h1>
+              <img 
+                src={logoSolution88}
+                alt="Solution 88 Logo" 
+                className="w-20 h-14 object-contain"
+              />
             </div>
           </Link>
 
