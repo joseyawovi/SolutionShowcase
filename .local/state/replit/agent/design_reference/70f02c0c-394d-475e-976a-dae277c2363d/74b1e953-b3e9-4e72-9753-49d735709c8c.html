@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 88 - Équipements et Pièces Détachées Professionnels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#1E3A5F',
+                    secondary: '#FF6B35', 
+                    accent: '#6B7280',
+                    support: '#065F46',
+                    neutral: '#F8FAFC',
+                    dark: '#111827'
+                }
+            }
+        }
+    };
+    </script>
+</head>
+<body class="bg-neutral text-dark">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <!-- Logo placeholder -->
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">S88</span>
+                        </div>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-primary">Solution 88</h1>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-dark hover:text-primary transition-colors px-3 py-2 font-medium">Accueil</a>
+                        <a href="#equipment" class="text-dark hover:text-primary transition-colors px-3 py-2 font-medium">Engins</a>
+                        <a href="#parts" class="text-dark hover:text-primary transition-colors px-3 py-2 font-medium">Pièces</a>
+                        <a href="#contact" class="text-dark hover:text-primary transition-colors px-3 py-2 font-medium">Contact</a>
+                        <div class="flex items-center space-x-2">
+                            <button class="text-sm px-3 py-1 border border-accent rounded hover:bg-accent hover:text-white transition-colors">FR</button>
+                            <button class="text-sm px-3 py-1 text-accent hover:text-primary transition-colors">EN</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-dark hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-primary">
+        <!-- Professional construction site with heavy machinery -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080'); opacity: 0.7;"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    Spécialistes en Équipements Industriels
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                    Solution 88 vous accompagne dans vos projets avec une large gamme d'engins et pièces détachées pour l'agriculture, le BTP et l'industrie.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-secondary hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition-colors">
+                        <i class="fas fa-search mr-2"></i>
+                        Découvrir nos Équipements
+                    </button>
+                    <button class="border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-4 px-8 rounded-lg transition-colors">
+                        <i class="fas fa-phone mr-2"></i>
+                        Demander un Devis
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">Nos Domaines d'Expertise</h2>
+                <p class="text-lg text-accent max-w-2xl mx-auto">
+                    Nous proposons des solutions complètes pour tous vos besoins en équipements professionnels
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-neutral rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-support rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tractor text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Agriculture</h3>
+                    <p class="text-accent mb-4">Tracteurs, moissonneuses, équipements d'élevage et pièces agricoles de qualité professionnelle.</p>
+                    <a href="#agriculture" class="text-support hover:text-green-700 font-medium">En savoir plus →</a>
+                </div>
+                
+                <div class="bg-neutral rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hard-hat text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">BTP</h3>
+                    <p class="text-accent mb-4">Pelles, bulldozers, grues, camions et tout l'équipement pour vos chantiers de construction.</p>
+                    <a href="#construction" class="text-secondary hover:text-orange-700 font-medium">En savoir plus →</a>
+                </div>
+                
+                <div class="bg-neutral rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-industry text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Industrie</h3>
+                    <p class="text-accent mb-4">Chariots élévateurs, convoyeurs, machines-outils et équipements industriels spécialisés.</p>
+                    <a href="#industry" class="text-primary hover:text-blue-800 font-medium">En savoir plus →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Catalog Section -->
+    <section id="equipment" class="py-16 bg-neutral">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-dark mb-4">Catalogue des Engins</h2>
+                    <p class="text-lg text-accent">Découvrez notre sélection d'équipements professionnels</p>
+                </div>
+                
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-2 mt-4 md:mt-0">
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg font-medium">Tous</button>
+                    <button class="bg-white text-dark px-4 py-2 rounded-lg font-medium hover:bg-support hover:text-white transition-colors">Agriculture</button>
+                    <button class="bg-white text-dark px-4 py-2 rounded-lg font-medium hover:bg-secondary hover:text-white transition-colors">BTP</button>
+                    <button class="bg-white text-dark px-4 py-2 rounded-lg font-medium hover:bg-primary hover:text-white transition-colors">Industrie</button>
+                </div>
+            </div>
+            
+            <!-- Equipment Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Excavator Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <!-- Heavy excavator on construction site -->
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Pelle excavatrice sur chantier" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-medium">BTP</span>
+                            <span class="text-support font-bold">Occasion</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Pelle Excavatrice 20T</h3>
+                        <p class="text-accent mb-4">Pelle hydraulique sur chenilles, idéale pour travaux de terrassement et démolition.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-accent">
+                                <p><i class="fas fa-weight-hanging mr-2"></i>20 tonnes</p>
+                                <p><i class="fas fa-cogs mr-2"></i>180 HP</p>
+                            </div>
+                            <button class="bg-primary hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tractor Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <!-- Agricultural tractor in field -->
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Tracteur agricole moderne dans un champ" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-support text-white px-3 py-1 rounded-full text-sm font-medium">Agriculture</span>
+                            <span class="text-primary font-bold">Neuf</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Tracteur Agricole 150HP</h3>
+                        <p class="text-accent mb-4">Tracteur polyvalent pour tous travaux agricoles, équipé des dernières technologies.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-accent">
+                                <p><i class="fas fa-horse-head mr-2"></i>150 HP</p>
+                                <p><i class="fas fa-cogs mr-2"></i>40 km/h</p>
+                            </div>
+                            <button class="bg-primary hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Forklift Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <!-- Industrial forklift in warehouse -->
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Chariot élévateur industriel dans entrepôt" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">Industrie</span>
+                            <span class="text-secondary font-bold">Occasion</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Chariot Élévateur 3T</h3>
+                        <p class="text-accent mb-4">Chariot élévateur diesel pour manutention intensive en entrepôt et extérieur.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-accent">
+                                <p><i class="fas fa-weight-hanging mr-2"></i>3000 kg</p>
+                                <p><i class="fas fa-arrows-alt-v mr-2"></i>4.5m levée</p>
+                            </div>
+                            <button class="bg-primary hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bulldozer Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <!-- Bulldozer on construction site -->
+                    <img src="https://pixabay.com/get/g51a723ae8857366cfa5bb1c02fd736daa1b58701e3c9ed59f7703c37d537f816b55d6724fa9c4cefd3ab5a369aaa84b62f2a49846a2185e57accc6d5477f9c5f_1280.jpg" alt="Bulldozer sur chantier de terrassement" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-medium">BTP</span>
+                            <span class="text-primary font-bold">Neuf</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Bulldozer D6</h3>
+                        <p class="text-accent mb-4">Bulldozer sur chenilles pour travaux de terrassement et nivellement.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-accent">
+                                <p><i class="fas fa-weight-hanging mr-2"></i>18 tonnes</p>
+                                <p><i class="fas fa-cogs mr-2"></i>170 HP</p>
+                            </div>
+                            <button class="bg-primary hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Combine Harvester Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <!-- Combine harvester in field -->
+                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Moissonneuse-batteuse dans un champ de céréales" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-support text-white px-3 py-1 rounded-full text-sm font-medium">Agriculture</span>
+                            <span class="text-secondary font-bold">Occasion</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Moissonneuse-Batteuse</h3>
+                        <p class="text-accent mb-4">Moissonneuse haute performance pour récolte de céréales et oléagineux.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-accent">
+                                <p><i class="fas fa-ruler-horizontal mr-2"></i>6.20m coupe</p>
+                                <p><i class="fas fa-cogs mr-2"></i>340 HP</p>
+                            </div>
+                            <button class="bg-primary hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Crane Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <!-- Mobile crane on construction site -->
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Grue mobile sur chantier de construction" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-medium">BTP</span>
+                            <span class="text-primary font-bold">Neuf</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Grue Mobile 50T</h3>
+                        <p class="text-accent mb-4">Grue mobile tout terrain pour levage et manutention sur chantiers.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-accent">
+                                <p><i class="fas fa-weight-hanging mr-2"></i>50 tonnes</p>
+                                <p><i class="fas fa-arrows-alt-v mr-2"></i>40m flèche</p>
+                            </div>
+                            <button class="bg-primary hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-secondary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                    Voir tous les équipements
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spare Parts Section -->
+    <section id="parts" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">Pièces Détachées</h2>
+                <p class="text-lg text-accent max-w-2xl mx-auto">
+                    Large gamme de pièces d'origine et compatibles pour maintenir vos équipements en parfait état
+                </p>
+            </div>
+            
+            <!-- Parts Categories -->
+            <div class="grid md:grid-cols-4 gap-6 mb-12">
+                <div class="bg-neutral rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cog text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-dark mb-2">Moteur</h3>
+                    <p class="text-sm text-accent">Pièces moteur et transmission</p>
+                </div>
+                
+                <div class="bg-neutral rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-oil-can text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-dark mb-2">Hydraulique</h3>
+                    <p class="text-sm text-accent">Pompes, vérins, flexibles</p>
+                </div>
+                
+                <div class="bg-neutral rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-support rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-dark mb-2">Châssis</h3>
+                    <p class="text-sm text-accent">Chenilles, roues, essieux</p>
+                </div>
+                
+                <div class="bg-neutral rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wrench text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-dark mb-2">Cabine</h3>
+                    <p class="text-sm text-accent">Sièges, vitres, climatisation</p>
+                </div>
+            </div>
+            
+            <!-- Featured Parts -->
+            <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Engine Part -->
+                <div class="bg-neutral rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <!-- Close-up of engine components -->
+                    <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Composants moteur industriels" class="w-full h-32 object-cover" />
+                    <div class="p-4">
+                        <h4 class="font-bold text-dark mb-2">Filtre à huile</h4>
+                        <p class="text-sm text-accent mb-2">Ref: FO-2847</p>
+                        <p class="text-xs text-accent mb-3">Compatible: CAT 320, JCB 8080</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary">En stock</span>
+                            <button class="bg-secondary hover:bg-orange-600 text-white px-3 py-1 rounded text-sm transition-colors">
+                                Devis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hydraulic Part -->
+                <div class="bg-neutral rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <!-- Hydraulic system components -->
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Système hydraulique industriel" class="w-full h-32 object-cover" />
+                    <div class="p-4">
+                        <h4 class="font-bold text-dark mb-2">Pompe hydraulique</h4>
+                        <p class="text-sm text-accent mb-2">Ref: PH-1234</p>
+                        <p class="text-xs text-accent mb-3">Compatible: Liebherr, Volvo</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-secondary">Sur commande</span>
+                            <button class="bg-secondary hover:bg-orange-600 text-white px-3 py-1 rounded text-sm transition-colors">
+                                Devis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Track Part -->
+                <div class="bg-neutral rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <!-- Excavator tracks and undercarriage -->
+                    <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Chenilles et train de roulement d'excavatrice" class="w-full h-32 object-cover" />
+                    <div class="p-4">
+                        <h4 class="font-bold text-dark mb-2">Chaîne de chenille</h4>
+                        <p class="text-sm text-accent mb-2">Ref: CH-5678</p>
+                        <p class="text-xs text-accent mb-3">Compatible: Komatsu PC200</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary">En stock</span>
+                            <button class="bg-secondary hover:bg-orange-600 text-white px-3 py-1 rounded text-sm transition-colors">
+                                Devis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cabin Part -->
+                <div class="bg-neutral rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <!-- Professional operator cabin interior -->
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Intérieur de cabine d'opérateur professionnel" class="w-full h-32 object-cover" />
+                    <div class="p-4">
+                        <h4 class="font-bold text-dark mb-2">Siège opérateur</h4>
+                        <p class="text-sm text-accent mb-2">Ref: SO-9012</p>
+                        <p class="text-xs text-accent mb-3">Compatible: Universel</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary">En stock</span>
+                            <button class="bg-secondary hover:bg-orange-600 text-white px-3 py-1 rounded text-sm transition-colors">
+                                Devis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-primary hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                    Catalogue complet des pièces
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal (Hidden by default) -->
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6">
+                    <!-- Modal Header -->
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h2 class="text-2xl font-bold text-dark mb-2">Pelle Excavatrice 20T</h2>
+                            <div class="flex items-center gap-4">
+                                <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-medium">BTP</span>
+                                <span class="text-support font-bold">Occasion - Excellent état</span>
+                            </div>
+                        </div>
+                        <button class="text-accent hover:text-dark transition-colors" onclick="closeModal()">
+                            <i class="fas fa-times text-2xl"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Image Gallery -->
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <!-- Main product image - excavator detail view -->
+                            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Vue principale de la pelle excavatrice" class="w-full h-64 object-cover rounded-lg shadow-lg" />
+                            <div class="grid grid-cols-3 gap-2 mt-4">
+                                <!-- Additional angle views -->
+                                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150" alt="Vue latérale excavatrice" class="h-20 object-cover rounded cursor-pointer" />
+                                <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150" alt="Vue arrière excavatrice" class="h-20 object-cover rounded cursor-pointer" />
+                                <img src="https://pixabay.com/get/g071550ebcef9c6e3619153ab94ba8f5e62602fbfdba7fc0d2b780db604f350cb1ca751827cb245c7723fcdb6b7024c2268827f55b3217b4625d12dff3a440186_1280.jpg" alt="Détail bras excavatrice" class="h-20 object-cover rounded cursor-pointer" />
+                            </div>
+                        </div>
+                        
+                        <!-- Specifications -->
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-4">Caractéristiques techniques</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                    <span class="text-accent">Poids opérationnel</span>
+                                    <span class="font-medium text-dark">20 tonnes</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                    <span class="text-accent">Puissance moteur</span>
+                                    <span class="font-medium text-dark">180 HP</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                    <span class="text-accent">Profondeur de fouille</span>
+                                    <span class="font-medium text-dark">6.8 m</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                    <span class="text-accent">Portée maximale</span>
+                                    <span class="font-medium text-dark">9.8 m</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                    <span class="text-accent">Largeur de transport</span>
+                                    <span class="font-medium text-dark">2.8 m</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                    <span class="text-accent">Année</span>
+                                    <span class="font-medium text-dark">2019</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                    <span class="text-accent">Heures de fonctionnement</span>
+                                    <span class="font-medium text-dark">3,250 h</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-accent">Disponibilité</span>
+                                    <span class="font-bold text-support">Immédiate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Description -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-dark mb-4">Description</h3>
+                        <p class="text-accent leading-relaxed">
+                            Pelle excavatrice hydraulique sur chenilles en excellent état d'entretien. Parfaite pour tous travaux de terrassement, 
+                            démolition et manutention. Équipée d'un système hydraulique haute performance et d'une cabine climatisée pour le confort 
+                            de l'opérateur. Machine révisée et contrôlée par nos techniciens certifiés. Garantie 6 mois pièces et main d'œuvre.
+                        </p>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-secondary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition-colors flex-1">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            Demander un Devis
+                        </button>
+                        <button class="bg-primary hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition-colors flex-1">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Contact WhatsApp
+                        </button>
+                        <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 px-8 rounded-lg transition-colors flex-1">
+                            <i class="fas fa-phone mr-2"></i>
+                            Appeler
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Contactez-nous</h2>
+                <p class="text-lg text-gray-200 max-w-2xl mx-auto">
+                    Notre équipe d'experts est à votre disposition pour vous accompagner dans vos projets
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-dark mb-6">Demande de Devis</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-dark mb-2">Nom *</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-dark mb-2">Prénom *</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-dark mb-2">Email *</label>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-dark mb-2">Téléphone</label>
+                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-dark mb-2">Entreprise</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-dark mb-2">Domaine d'activité</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option>Sélectionner...</option>
+                                <option>Agriculture</option>
+                                <option>BTP</option>
+                                <option>Industrie</option>
+                                <option>Transport</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-dark mb-2">Message *</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Décrivez votre besoin, le type d'équipement recherché..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-secondary hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Envoyer ma demande
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="text-white">
+                    <div class="bg-white/10 rounded-xl p-8 backdrop-blur-sm mb-8">
+                        <h3 class="text-2xl font-bold mb-6">Informations de Contact</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2">Adresse</h4>
+                                    <p class="text-gray-200">Zone Industrielle Solution 88<br>Avenue de l'Industrie, 12345 Ville<br>France</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2">Téléphone</h4>
+                                    <p class="text-gray-200">+33 1 23 45 67 89</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fab fa-whatsapp text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2">WhatsApp</h4>
+                                    <p class="text-gray-200">+33 6 12 34 56 78</p>
+                                    <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg mt-2 transition-colors">
+                                        <i class="fab fa-whatsapp mr-2"></i>Contacter
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2">Email</h4>
+                                    <p class="text-gray-200">contact@solution88.fr<br>commercial@solution88.fr</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2">Horaires d'ouverture</h4>
+                                    <p class="text-gray-200">Lun-Ven: 8h00 - 18h00<br>Sam: 8h00 - 12h00<br>Dim: Fermé</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Map Placeholder -->
+                    <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                        <div class="bg-accent/20 h-64 rounded-lg flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-map text-4xl mb-4"></i>
+                                <p class="text-sm">Carte de localisation</p>
+                                <!-- TODO: Intégrer Google Maps ou OpenStreetMap -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">S88</span>
+                        </div>
+                        <h3 class="text-lg font-bold">Solution 88</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Votre partenaire de confiance pour tous vos besoins en équipements industriels, agricoles et de construction.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Nos Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Équipements Agricoles</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Matériel BTP</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Équipements Industriels</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pièces Détachées</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">À propos</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Catalogue</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Occasions</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Financement</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <div class="space-y-3 text-gray-400">
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-secondary"></i>
+                            +33 1 23 45 67 89
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-secondary"></i>
+                            contact@solution88.fr
+                        </p>
+                        <p class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1 text-secondary"></i>
+                            Zone Industrielle Solution 88<br>
+                            Avenue de l'Industrie<br>
+                            12345 Ville, France
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Solution 88. Tous droits réservés. | 
+                   <a href="#" class="hover:text-white transition-colors">Mentions légales</a> | 
+                   <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        // TODO: Implement business logic, API calls, and state management
+        
+        // Modal functionality
+        window.closeModal = function() {
+            document.getElementById('productModal').classList.add('hidden');
+        };
+        
+        // Open modal when clicking "Voir détails" buttons
+        document.querySelectorAll('button:contains("Voir détails")').forEach(button => {
+            button.addEventListener('click', function() {
+                document.getElementById('productModal').classList.remove('hidden');
+            });
+        });
+        
+        // Close modal when clicking outside
+        document.getElementById('productModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Filter functionality for equipment catalog
+        document.querySelectorAll('button[class*="hover:bg-"]').forEach(button => {
+            if (button.textContent.includes('Agriculture') || button.textContent.includes('BTP') || button.textContent.includes('Industrie') || button.textContent.includes('Tous')) {
+                button.addEventListener('click', function() {
+                    // Remove active class from all filter buttons
+                    document.querySelectorAll('button[class*="hover:bg-"]').forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white');
+                        btn.classList.add('bg-white', 'text-dark');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.remove('bg-white', 'text-dark');
+                    this.classList.add('bg-primary', 'text-white');
+                    
+                    // TODO: Implement actual filtering logic
+                    console.log('Filtering by:', this.textContent);
+                });
+            }
+        });
+        
+        // Form validation and submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // TODO: Implement form validation and submission logic
+            alert('Formulaire soumis ! Un commercial vous recontactera sous 24h.');
+        });
+        
+        // WhatsApp contact functionality
+        document.querySelectorAll('button:contains("WhatsApp")').forEach(button => {
+            button.addEventListener('click', function() {
+                const phoneNumber = '+33612345678';
+                const message = 'Bonjour, je souhaite obtenir des informations sur vos équipements.';
+                const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\+/g, '')}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+        
+        // Mobile menu toggle (basic implementation)
+        document.querySelector('.md\\:hidden button').addEventListener('click', function() {
+            // TODO: Implement mobile menu toggle
+            console.log('Mobile menu toggle clicked');
+        });
+        
+        // Language switcher
+        document.querySelectorAll('button:contains("FR"), button:contains("EN")').forEach(button => {
+            button.addEventListener('click', function() {
+                // TODO: Implement language switching
+                console.log('Language switch to:', this.textContent);
+            });
+        });
+    })();
+    </script>
+</body>
+</html>

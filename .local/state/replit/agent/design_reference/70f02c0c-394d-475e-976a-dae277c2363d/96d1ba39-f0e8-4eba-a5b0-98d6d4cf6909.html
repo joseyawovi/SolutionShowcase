@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 88 - Équipements et Pièces Détachées</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#DC2626',
+                        accent: '#F59E0B',
+                        industrial: '#334155',
+                        'industrial-light': '#64748B'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">S88</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-industrial">Solution 88</h1>
+                        <p class="text-sm text-industrial-light">Équipements Professionnels</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="text-industrial hover:text-primary transition-colors">Accueil</a>
+                    <a href="#engins" class="text-industrial hover:text-primary transition-colors">Engins</a>
+                    <a href="#pieces" class="text-industrial hover:text-primary transition-colors">Pièces</a>
+                    <a href="#contact" class="text-industrial hover:text-primary transition-colors">Contact</a>
+                    
+                    <!-- Language Toggle -->
+                    <div class="flex items-center space-x-2 border-l pl-4">
+                        <button class="px-3 py-1 text-sm bg-primary text-white rounded">FR</button>
+                        <button class="px-3 py-1 text-sm text-industrial hover:bg-gray-100 rounded">EN</button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2">
+                    <i class="fas fa-bars text-xl text-industrial"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-industrial mb-6">
+                        Votre partenaire en <span class="text-primary">équipements industriels</span>
+                    </h2>
+                    <p class="text-xl text-industrial-light mb-8">
+                        Spécialisés dans l'exposition et la vente d'engins et pièces détachées pour l'agriculture, le BTP et l'industrie.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-search mr-2"></i>
+                            Voir le Catalogue
+                        </button>
+                        <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-phone mr-2"></i>
+                            Nous Contacter
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Industrial equipment showcase image -->
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                         alt="Équipements industriels Solution 88" 
+                         class="rounded-xl shadow-2xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-industrial">500+ Équipements</p>
+                                <p class="text-sm text-industrial-light">En stock permanent</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-industrial mb-4">Nos Domaines d'Expertise</h3>
+                <p class="text-xl text-industrial-light">Des solutions complètes pour tous vos besoins industriels</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Agriculture -->
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
+                    <!-- Agricultural machinery image -->
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                         alt="Matériel agricole" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tractor text-green-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-industrial mb-2">Agriculture</h4>
+                    <p class="text-industrial-light">Tracteurs, moissonneuses, outils agricoles et pièces détachées</p>
+                </div>
+
+                <!-- BTP -->
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
+                    <!-- Construction equipment image -->
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                         alt="Équipements BTP" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hard-hat text-orange-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-industrial mb-2">BTP</h4>
+                    <p class="text-industrial-light">Pelles, chargeurs, camions et équipements de chantier</p>
+                </div>
+
+                <!-- Industrie -->
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
+                    <!-- Industrial equipment image -->
+                    <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                         alt="Équipements industriels" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-industry text-blue-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-industrial mb-2">Industrie</h4>
+                    <p class="text-industrial-light">Chariots élévateurs, compresseurs et outillage industriel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Engins Section -->
+    <section id="engins" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h3 class="text-3xl font-bold text-industrial mb-2">Catalogue des Engins</h3>
+                    <p class="text-industrial-light">Découvrez notre sélection d'équipements professionnels</p>
+                </div>
+                
+                <!-- Filters -->
+                <div class="flex items-center space-x-4">
+                    <select class="border border-gray-300 rounded-lg px-4 py-2 bg-white">
+                        <option>Tous les secteurs</option>
+                        <option>Agriculture</option>
+                        <option>BTP</option>
+                        <option>Industrie</option>
+                    </select>
+                    <select class="border border-gray-300 rounded-lg px-4 py-2 bg-white">
+                        <option>Tous les états</option>
+                        <option>Neuf</option>
+                        <option>Occasion</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Equipment Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Equipment Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Construction excavator image -->
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" 
+                         alt="Pelle hydraulique Caterpillar 320" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-industrial">Pelle Hydraulique 320</h4>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Occasion</span>
+                        </div>
+                        <p class="text-industrial-light mb-3">Secteur: BTP</p>
+                        <div class="space-y-1 mb-4 text-sm">
+                            <p><span class="font-medium">Puissance:</span> 120 HP</p>
+                            <p><span class="font-medium">Année:</span> 2018</p>
+                            <p><span class="font-medium">Heures:</span> 3,500h</p>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors" onclick="openProductModal('pelle-320')">
+                            <i class="fas fa-eye mr-2"></i>
+                            Voir Détails
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Equipment Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Agricultural tractor image -->
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" 
+                         alt="Tracteur agricole John Deere 6120M" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-industrial">Tracteur 6120M</h4>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm">Neuf</span>
+                        </div>
+                        <p class="text-industrial-light mb-3">Secteur: Agriculture</p>
+                        <div class="space-y-1 mb-4 text-sm">
+                            <p><span class="font-medium">Puissance:</span> 165 HP</p>
+                            <p><span class="font-medium">Année:</span> 2024</p>
+                            <p><span class="font-medium">Transmission:</span> AutoPowr</p>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-eye mr-2"></i>
+                            Voir Détails
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Equipment Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Forklift image -->
+                    <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" 
+                         alt="Chariot élévateur Toyota 8FBE20T" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-industrial">Chariot Élévateur 8FBE20T</h4>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Occasion</span>
+                        </div>
+                        <p class="text-industrial-light mb-3">Secteur: Industrie</p>
+                        <div class="space-y-1 mb-4 text-sm">
+                            <p><span class="font-medium">Capacité:</span> 2,0 T</p>
+                            <p><span class="font-medium">Hauteur:</span> 4,5 m</p>
+                            <p><span class="font-medium">Type:</span> Électrique</p>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-eye mr-2"></i>
+                            Voir Détails
+                        </button>
+                    </div>
+                </div>
+
+                <!-- More equipment cards would follow the same pattern -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Construction truck image -->
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" 
+                         alt="Camion benne Volvo FH16" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-industrial">Camion Benne FH16</h4>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Occasion</span>
+                        </div>
+                        <p class="text-industrial-light mb-3">Secteur: BTP</p>
+                        <div class="space-y-1 mb-4 text-sm">
+                            <p><span class="font-medium">PTAC:</span> 40 T</p>
+                            <p><span class="font-medium">Moteur:</span> D16G</p>
+                            <p><span class="font-medium">Km:</span> 180,000</p>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-eye mr-2"></i>
+                            Voir Détails
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Agricultural machinery image -->
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" 
+                         alt="Moissonneuse batteuse Case IH Axial-Flow" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-industrial">Moissonneuse Axial-Flow</h4>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm">Neuf</span>
+                        </div>
+                        <p class="text-industrial-light mb-3">Secteur: Agriculture</p>
+                        <div class="space-y-1 mb-4 text-sm">
+                            <p><span class="font-medium">Largeur:</span> 7,6 m</p>
+                            <p><span class="font-medium">Trémie:</span> 10,500 L</p>
+                            <p><span class="font-medium">Puissance:</span> 415 HP</p>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-eye mr-2"></i>
+                            Voir Détails
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Industrial compressor image -->
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" 
+                         alt="Compresseur Atlas Copco GA22" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-industrial">Compresseur GA22</h4>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Occasion</span>
+                        </div>
+                        <p class="text-industrial-light mb-3">Secteur: Industrie</p>
+                        <div class="space-y-1 mb-4 text-sm">
+                            <p><span class="font-medium">Débit:</span> 3,8 m³/min</p>
+                            <p><span class="font-medium">Pression:</span> 8 bar</p>
+                            <p><span class="font-medium">Puissance:</span> 22 kW</p>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-eye mr-2"></i>
+                            Voir Détails
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center">
+                <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                    Voir Plus d'Engins
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spare Parts Section -->
+    <section id="pieces" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-industrial mb-4">Pièces Détachées</h3>
+                <p class="text-xl text-industrial-light">Un large stock de pièces pour tous vos équipements</p>
+            </div>
+
+            <!-- Parts Filter -->
+            <div class="bg-gray-50 p-6 rounded-xl mb-8">
+                <div class="grid md:grid-cols-4 gap-4">
+                    <select class="border border-gray-300 rounded-lg px-4 py-2 bg-white">
+                        <option>Catégorie</option>
+                        <option>Moteur</option>
+                        <option>Hydraulique</option>
+                        <option>Transmission</option>
+                        <option>Châssis</option>
+                    </select>
+                    <select class="border border-gray-300 rounded-lg px-4 py-2 bg-white">
+                        <option>Marque</option>
+                        <option>Caterpillar</option>
+                        <option>John Deere</option>
+                        <option>Volvo</option>
+                        <option>Komatsu</option>
+                    </select>
+                    <input type="text" placeholder="Référence pièce" class="border border-gray-300 rounded-lg px-4 py-2">
+                    <button class="bg-primary hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                        <i class="fas fa-search mr-2"></i>
+                        Rechercher
+                    </button>
+                </div>
+            </div>
+
+            <!-- Parts Grid -->
+            <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Part Card 1 -->
+                <div class="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-shadow">
+                    <!-- Spare parts image -->
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200" 
+                         alt="Filtre hydraulique CAT 1R0756" 
+                         class="w-full h-32 object-cover rounded-lg mb-3">
+                    <h4 class="font-semibold text-industrial mb-1">Filtre Hydraulique</h4>
+                    <p class="text-sm text-industrial-light mb-2">Réf: 1R0756</p>
+                    <p class="text-xs text-green-600 mb-2">Compatible: CAT 320, 325</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm font-medium text-industrial">En stock</span>
+                        <button class="bg-primary hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition-colors">
+                            Demander prix
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Part Card 2 -->
+                <div class="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-shadow">
+                    <!-- Engine parts image -->
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200" 
+                         alt="Kit embrayage John Deere RE70957" 
+                         class="w-full h-32 object-cover rounded-lg mb-3">
+                    <h4 class="font-semibold text-industrial mb-1">Kit Embrayage</h4>
+                    <p class="text-sm text-industrial-light mb-2">Réf: RE70957</p>
+                    <p class="text-xs text-green-600 mb-2">Compatible: JD 6120, 6130</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm font-medium text-industrial">En stock</span>
+                        <button class="bg-primary hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition-colors">
+                            Demander prix
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Part Card 3 -->
+                <div class="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-shadow">
+                    <!-- Hydraulic parts image -->
+                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200" 
+                         alt="Pompe hydraulique Volvo 14556541" 
+                         class="w-full h-32 object-cover rounded-lg mb-3">
+                    <h4 class="font-semibold text-industrial mb-1">Pompe Hydraulique</h4>
+                    <p class="text-sm text-industrial-light mb-2">Réf: 14556541</p>
+                    <p class="text-xs text-green-600 mb-2">Compatible: Volvo EC460</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm font-medium text-orange-600">Sur commande</span>
+                        <button class="bg-primary hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition-colors">
+                            Demander prix
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Part Card 4 -->
+                <div class="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-shadow">
+                    <!-- Spare parts bearings image -->
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200" 
+                         alt="Roulement SKF 6210-2RSH" 
+                         class="w-full h-32 object-cover rounded-lg mb-3">
+                    <h4 class="font-semibold text-industrial mb-1">Roulement SKF</h4>
+                    <p class="text-sm text-industrial-light mb-2">Réf: 6210-2RSH</p>
+                    <p class="text-xs text-green-600 mb-2">Universel</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm font-medium text-industrial">En stock</span>
+                        <button class="bg-primary hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition-colors">
+                            Demander prix
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Parts -->
+            <div class="text-center mt-8">
+                <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                    Voir Plus de Pièces
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-industrial mb-4">Nous Contacter</h3>
+                <p class="text-xl text-industrial-light">Besoin d'un devis ou d'informations ? Contactez-nous !</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-semibold text-industrial mb-6">Demande de Contact</h4>
+                    <form class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Prénom *" class="border border-gray-300 rounded-lg px-4 py-3 focus:border-primary focus:outline-none">
+                            <input type="text" placeholder="Nom *" class="border border-gray-300 rounded-lg px-4 py-3 focus:border-primary focus:outline-none">
+                        </div>
+                        <input type="email" placeholder="Email *" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-primary focus:outline-none">
+                        <input type="tel" placeholder="Téléphone" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-primary focus:outline-none">
+                        <select class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-primary focus:outline-none">
+                            <option>Secteur d'intérêt</option>
+                            <option>Agriculture</option>
+                            <option>BTP</option>
+                            <option>Industrie</option>
+                            <option>Pièces détachées</option>
+                        </select>
+                        <textarea rows="4" placeholder="Votre message *" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-primary focus:outline-none resize-none"></textarea>
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white py-4 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Envoyer la Demande
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-6">
+                    <!-- Contact Details -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-semibold text-industrial mb-4">Coordonnées</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-map-marker-alt text-primary w-5"></i>
+                                <p class="text-industrial">123 Zone Industrielle, 75001 Paris, France</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-phone text-primary w-5"></i>
+                                <p class="text-industrial">+33 1 23 45 67 89</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-envelope text-primary w-5"></i>
+                                <p class="text-industrial">contact@solution88.fr</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Quick Contact -->
+                    <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                        <h4 class="text-xl font-semibold text-industrial mb-4">Contact Rapide</h4>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-xl mr-2"></i>
+                            Contacter via WhatsApp
+                        </button>
+                        <p class="text-sm text-gray-600 mt-2 text-center">Réponse rapide garantie !</p>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-semibold text-industrial mb-4">Horaires d'Ouverture</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-industrial-light">Lundi - Vendredi</span>
+                                <span class="text-industrial">8h00 - 18h00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-industrial-light">Samedi</span>
+                                <span class="text-industrial">9h00 - 12h00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-industrial-light">Dimanche</span>
+                                <span class="text-industrial">Fermé</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map placeholder -->
+                    <div class="bg-gray-200 h-48 rounded-xl flex items-center justify-center">
+                        <p class="text-gray-500">
+                            <i class="fas fa-map text-2xl mb-2 block text-center"></i>
+                            Carte de localisation
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-industrial text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">S88</span>
+                        </div>
+                        <span class="text-xl font-bold">Solution 88</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">Votre partenaire de confiance pour tous vos besoins en équipements industriels.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-300 hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="#engins" class="text-gray-300 hover:text-white transition-colors">Catalogue Engins</a></li>
+                        <li><a href="#pieces" class="text-gray-300 hover:text-white transition-colors">Pièces Détachées</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Nos Secteurs</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300">Agriculture</li>
+                        <li class="text-gray-300">BTP & Construction</li>
+                        <li class="text-gray-300">Industrie</li>
+                        <li class="text-gray-300">Pièces Détachées</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-300"><i class="fas fa-phone mr-2"></i>+33 1 23 45 67 89</p>
+                        <p class="text-gray-300"><i class="fas fa-envelope mr-2"></i>contact@solution88.fr</p>
+                        <p class="text-gray-300"><i class="fas fa-map-marker-alt mr-2"></i>Paris, France</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300">&copy; 2024 Solution 88. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors text-sm">Mentions Légales</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors text-sm">CGV</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors text-sm">Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal (Example) -->
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl max-w-4xl w-full max-h-screen overflow-y-auto">
+                <div class="p-6">
+                    <!-- Modal Header -->
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-2xl font-bold text-industrial">Pelle Hydraulique 320</h3>
+                        <button onclick="closeProductModal()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+
+                    <!-- Modal Content -->
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <!-- Image Gallery -->
+                        <div>
+                            <!-- Construction excavator detailed image -->
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
+                                 alt="Pelle hydraulique Caterpillar 320 - Vue détaillée" 
+                                 class="w-full h-80 object-cover rounded-lg mb-4">
+                            
+                            <!-- Thumbnail Gallery -->
+                            <div class="flex space-x-2">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=80" 
+                                     alt="Vue avant de la pelle" 
+                                     class="w-20 h-16 object-cover rounded cursor-pointer border-2 border-primary">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=80" 
+                                     alt="Vue latérale de la pelle" 
+                                     class="w-20 h-16 object-cover rounded cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=80" 
+                                     alt="Cabine de la pelle" 
+                                     class="w-20 h-16 object-cover rounded cursor-pointer">
+                            </div>
+                        </div>
+
+                        <!-- Product Details -->
+                        <div>
+                            <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm inline-block mb-4">Occasion - Excellent État</div>
+                            
+                            <div class="space-y-4 mb-6">
+                                <div>
+                                    <h4 class="font-semibold text-industrial">Spécifications Techniques</h4>
+                                    <div class="grid grid-cols-2 gap-4 mt-2">
+                                        <div>
+                                            <p class="text-sm text-industrial-light">Marque</p>
+                                            <p class="font-medium">Caterpillar</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-industrial-light">Modèle</p>
+                                            <p class="font-medium">320 GC</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-industrial-light">Puissance</p>
+                                            <p class="font-medium">120 HP</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-industrial-light">Poids</p>
+                                            <p class="font-medium">20 500 kg</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-industrial-light">Année</p>
+                                            <p class="font-medium">2018</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-industrial-light">Heures</p>
+                                            <p class="font-medium">3 500 h</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold text-industrial">Équipements</h4>
+                                    <ul class="mt-2 space-y-1 text-sm">
+                                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Climatisation cabine</li>
+                                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Attache rapide</li>
+                                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Chenilles caoutchouc</li>
+                                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Radio Bluetooth</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold text-industrial">Disponibilité</h4>
+                                    <p class="text-green-600 font-medium mt-1">
+                                        <i class="fas fa-check-circle mr-2"></i>
+                                        Disponible immédiatement
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="space-y-3">
+                                <button class="w-full bg-primary hover:bg-blue-700 text-white py-4 rounded-lg font-semibold transition-colors">
+                                    <i class="fas fa-file-alt mr-2"></i>
+                                    Demander un Devis
+                                </button>
+                                <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white py-3 rounded-lg font-semibold transition-colors">
+                                    <i class="fab fa-whatsapp mr-2"></i>
+                                    Contact WhatsApp
+                                </button>
+                                <button class="w-full text-industrial-light hover:text-industrial py-2 transition-colors">
+                                    <i class="fas fa-heart mr-2"></i>
+                                    Ajouter aux Favoris
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // TODO: Implement proper state management, API calls, and business logic
+
+            // Product modal functionality
+            window.openProductModal = function(productId) {
+                // TODO: Fetch product details from API based on productId
+                document.getElementById('productModal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            };
+
+            window.closeProductModal = function() {
+                document.getElementById('productModal').classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            };
+
+            // Close modal on outside click
+            document.getElementById('productModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeProductModal();
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu toggle functionality would be implemented here
+            // TODO: Implement mobile menu toggle, search functionality, and form submission handling
+
+            // Language toggle functionality
+            document.querySelectorAll('[data-lang]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // TODO: Implement language switching logic
+                    const lang = this.dataset.lang;
+                    console.log('Switch to language:', lang);
+                });
+            });
+
+        })();
+    </script>
+</body>
+</html>
